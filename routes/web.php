@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Interfaces\Http\Controllers\StandingsController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [StandingsController::class, 'index']);
